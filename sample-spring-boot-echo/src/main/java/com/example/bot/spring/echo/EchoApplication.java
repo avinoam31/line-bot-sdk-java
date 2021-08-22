@@ -42,7 +42,8 @@ public class EchoApplication {
     public Message handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         log.info("event: " + event);
         final String originalMessageText = event.getMessage().getText();
-        return new TextMessage(originalMessageText);
+        //return new TextMessage(originalMessageText);
+        return new TextMessage("hello! i am a stupid bot!");
     }
 
     @EventMapping
